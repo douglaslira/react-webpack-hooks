@@ -4,8 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, '..', './src/index.js'),
-  module: {
+	entry: path.resolve(__dirname, '..', './src/index.js'),
+	module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
@@ -42,20 +42,20 @@ module.exports = {
   },
   plugins: [
 		new HtmlWebpackPlugin({
-			title: 'Cyclus V2.0 - StartInnov',
+			title: 'DIGITAL FrontEnd - ALTRAN 2021',
       template: path.resolve(__dirname, '..', './public/index.html'),
 			meta: {
 				viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'
 			}
     }),
 		new MiniCssExtractPlugin({
-			filename: "css/[name].[hash].css"
+			filename: "css/[name].[chunkhash].css"
 		}),
 		new CleanWebpackPlugin()
   ],
   output: {
     path: path.resolve(__dirname, '..', 'dist'),
-    filename: 'js/[name].[hash].js',
+    filename: 'js/[name].[chunkhash].js',
 		publicPath: '/'
   },
 };
