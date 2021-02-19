@@ -7,15 +7,16 @@ const App = () => {
 
 	return (
 		<div className="container">
-			<div>
-				<Switch>
-					{
-						indexRoutes.map((prop, key) => {
-							return <Route path={prop.path} exact={prop.exact} key={key} component={prop.component} />;
-						})
-					}
-				</Switch>
-			</div>
+			<Switch>
+				{
+					indexRoutes.map((prop, key) => {
+						return <Route path={prop.path} exact={prop.exact} key={key} component={prop.component} />;
+					})
+				}
+			</Switch>
+			<footer className="footer fixed-bottom p-2">
+				<p className="text-center">Digital FrontEnd - ALTRAN &#10084; by Douglas Lira - 2021</p>
+			</footer>
 		</div>
 	)
 }

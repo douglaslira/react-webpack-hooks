@@ -3,8 +3,9 @@ import moment from 'moment';
 
 const initialState = {
 	formItems: {
-		title: '',
-		description: ''
+		title: 'Altran',
+		description: '',
+		date: moment().toDate()
 	},
 	lastUpdated: moment().format()
 };
